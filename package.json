@@ -1,0 +1,34 @@
+{
+  "name": "image-processing-api-fwd-project",
+  "version": "1.0.0",
+  "description": "The first project for FWD Advanced Web Development track",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js",
+    "prettier": "prettier --config .prettierrc '*.js' --write",
+    "build": "npx tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhmedGomaa013/Image-Processing-FWD-Nanadegree.git"
+  },
+  "author": "Ahmed Gomaa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AhmedGomaa013/Image-Processing-FWD-Nanadegree/issues"
+  },
+  "homepage": "https://github.com/AhmedGomaa013/Image-Processing-FWD-Nanadegree#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "eslint": "^8.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.3.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4"
+  }
+}
