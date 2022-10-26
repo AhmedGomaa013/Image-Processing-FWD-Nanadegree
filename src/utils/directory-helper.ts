@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import path from 'node:path';
 
 const createDirectory = async (directoryPath: string): Promise<void> => {
   // check on directory if false create directory
@@ -18,4 +19,5 @@ const fileExists = async (filePath: string): Promise<boolean> => {
   }
 };
 
-export { createDirectory, fileExists };
+const basePath = path.join(__dirname, '..', '..', 'assets');
+export { createDirectory, fileExists, basePath };
