@@ -1,5 +1,6 @@
 import app from '../app';
 import request from 'supertest';
+import { resizeImageFile } from '../utils/image-reading';
 
 describe('Image Processing API Testing', () => {
   it('Wrong Parameters', async () => {
@@ -28,5 +29,13 @@ describe('Image Processing API Testing', () => {
       '/api?filename=santamonica.jpg&width=1000&height=1000'
     );
     expect(res.status).toBe(200);
+  });
+});
+
+describe('Image Processing Testing', () => {
+  it("It shouldn't throw exception", async () => {
+    expect(async () => {
+      await resizeImageFile('santamonica.jpg', 100, 100);
+    }).not.toThrow();
   });
 });
