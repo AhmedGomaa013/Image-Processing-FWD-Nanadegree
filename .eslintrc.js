@@ -13,5 +13,6 @@ module.exports = {
     project: './tsconfig.json'
   },
   rules: {
+    '@typescript-eslint/no-misused-promises': 'off'
   }
 }

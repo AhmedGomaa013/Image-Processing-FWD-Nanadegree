@@ -4,13 +4,13 @@ const checkQuery = async (
   req: Request,
   res: Response,
   next: NextFunction
-): Promise<unknown> => {
+): Promise<any> => {
   let { filename, width, height } = req.query;
-  if (width === null || width === undefined || width === '') {
+  if (width === '' || isNaN(Number(width))) {
     return res.status(400).send('Wrong Parameters');
-  } else if (height === null || height === undefined || height === '') {
+  } else if (height === '' || isNaN(Number(height))) {
     return res.status(400).send('Wrong Parameters');
-  } else if (filename === null || filename === undefined || filename === '') {
+  } else if (filename == null || filename === '') {
     return res.status(400).send('Wrong Parameters');
   }
   filename = filename as unknown as string;
