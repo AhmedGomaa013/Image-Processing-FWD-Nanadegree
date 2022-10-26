@@ -8,10 +8,8 @@ app.use(routes);
 app.set('view engine', 'ejs');
 app.set('views', './view');
 
+app.listen(port, () => {
+  console.log(`server started at localhost:${port}`);
+});
 
-
-app.listen(port, ()=> {
-    console.log(`server started at localhost:${port}`)
-   });
-
-export default app; 
+export default app;
