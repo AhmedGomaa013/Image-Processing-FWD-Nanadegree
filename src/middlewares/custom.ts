@@ -6,9 +6,9 @@ const checkQuery = async (
   next: NextFunction
 ): Promise<any> => {
   let { filename, width, height } = req.query;
-  if (width === '' || isNaN(Number(width))) {
+  if (width === '' || isNaN(Number(width)) || Number(width) < 1) {
     return res.status(400).send('Wrong Parameters');
-  } else if (height === '' || isNaN(Number(height))) {
+  } else if (height === '' || isNaN(Number(height)) || Number(height) < 1) {
     return res.status(400).send('Wrong Parameters');
   } else if (filename == null || filename === '') {
     return res.status(400).send('Wrong Parameters');
