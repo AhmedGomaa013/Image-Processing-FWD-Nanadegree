@@ -38,4 +38,14 @@ describe('Image Processing Testing', () => {
       await resizeImageFile('santamonica.jpg', 100, 100);
     }).not.toThrow();
   });
+
+  it('to throw error', async () => {
+    let errorMessage = '';
+    try {
+        await resizeImageFile('santamonica.jpg', -100, 100);
+    } catch (error: any) {
+        errorMessage = error.message;
+    }
+    expect(errorMessage).toBe('Expected positive integer for width but received -100 of type number');
+});
 });
